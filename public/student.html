@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students | Little Innovators School</title>
+
+  <link rel="stylesheet" href="student.css">
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">🎓 Little Innovators</div>
+
+    <nav>
+  <a href="grade1-dashboard.html">
+    <i class="fa fa-chart-line"></i> Dashboard
+  </a>
+
+  <a href="student.html" class="active">
+    <i class="fa fa-users"></i> Students
+  </a>
+
+  <a href="attendance.html">
+    <i class="fa fa-calendar-check"></i> Attendance
+  </a>
+
+  <a href="homework.html">
+    <i class="fa fa-book"></i> Homework
+  </a>
+
+  <a href="events.html">
+    <i class="fa fa-calendar"></i> Events
+  </a>
+
+  <a href="reports.html">
+    <i class="fa fa-file"></i> Report Cards
+  </a>
+</nav>
+
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <div class="top">
+      <div>
+        <h1>Students</h1>
+        <!-- real count will be injected later -->
+        <p id="studentCount"></p>
+      </div>
+
+      <button class="btn-primary" onclick="openModal()">
+        <i class="fa fa-plus"></i> Add Student
+      </button>
+    </div>
+
+    
+
+    <!-- TABLE -->
+    <div class="table-card">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Grade</th>
+            <th>Parent</th>
+            <th>Email</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+
+        <!-- EMPTY BODY – REAL DATA GOES HERE -->
+        <tbody id="studentsTable">
+          <!-- students will be rendered dynamically -->
+        </tbody>
+      </table>
+
+      <!-- EMPTY STATE -->
+      <p id="noStudents" class="empty-state">
+        No students registered yet.
+      </p>
+    </div>
+
+  </main>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="studentModal">
+  <div class="modal-box">
+
+    <div class="modal-header">
+      <h3>Register New Student</h3>
+      <i class="fa fa-times" onclick="closeModal()"></i>
+    </div>
+
+    <form class="modal-form">
+      <label>Full Name</label>
+<input type="text" name="full_name" placeholder="John Doe">
+
+<label>Grade</label>
+<input type="text" name="grade" placeholder="Grade 5">
+
+<label>Parent / Guardian Name</label>
+<input type="text" name="parent_name" placeholder="Jane Doe">
+
+<label>Parent Email</label>
+<input type="email" name="parent_email" placeholder="parent@email.com">
+
+<label>Phone</label>
+<input type="text" name="phone" placeholder="+1 555 0100">
+
+      <button type="submit" class="btn-primary full">
+        Register Student
+      </button>
+    </form>
+
+  </div>
+</div>
+
+<script src="student.js"></script>
+</body>
+</html>

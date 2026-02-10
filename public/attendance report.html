@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Attendance Report</title>
+  <link rel="stylesheet" href="attendance report.css" />
+</head>
+<body>
+
+<div class="main">
+  <div class="header">
+    <div>
+      <h1>Report</h1>
+      <p>Attendance summary and analytics</p>
+    </div>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="stats">
+    <div class="card">
+      <h2 id="attendanceRate">0%</h2>
+      <p>Attendance Rate</p>
+    </div>
+
+    <div class="card green">
+      <h2 id="presentCount">0</h2>
+      <p>Present</p>
+    </div>
+
+    <div class="card red">
+      <h2 id="absentCount">0</h2>
+      <p>Absent</p>
+    </div>
+
+    <div class="card orange">
+      <h2 id="lateCount">0</h2>
+      <p>Late</p>
+    </div>
+  </div>
+
+  <button class="back" onclick="window.history.back()">Back</button>
+</div>
+
+
+</body>
+</html>

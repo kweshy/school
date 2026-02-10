@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Homework</title>
+   <style>
+    body {
+    font-family: Arial;
+    background: #f5f7f6;
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+.assign-btn {
+    background: #1f7a6f;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    width: 50%;         
+    margin-bottom: 10px;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+     width: 95%;           
+    max-width: 600px;
+}
+
+.tag {
+    background: #dff1ec;
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 10px;
+    font-size: 12px;
+}
+
+.bottom {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 4px;
+    color: #333;
+}
+
+/* MODAL */
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    height: 100%;
+}
+
+.modal-content {
+    background: white;
+    width: 380px;      
+    margin: 8% auto;
+    padding: 20px;
+    border-radius: 12px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background: #f9f9f9;
+}
+
+input[type="date"] {
+    color: #555;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;   /* title left, X right */
+    align-items: center;
+}
+
+.close {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+   </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Homework</h2>
+    <p class="subtitle">Assign and manage homework</p>
+
+    <button class="assign-btn" onclick="openModal()">
+        + Assign Homework
+    </button>
+
+    <h3>Active</h3>
+
+    <div id="homeworkList">
+
+        <div class="card">
+            <div class="tag">Mathematics</div>
+            <h4>Math Worksheet Ch.5</h4>
+            <p>Complete problems 1-20 on fractions</p>
+
+            <div class="bottom">
+                <span>Grade 5</span>
+                <span>Due: 2/10/2026</span>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+<div class="modal-content">
+   <div class="modal-header">
+    <h3>New Homework</h3>
+    <button class="close" onclick="closeModal()">×</button>
+</div>
+
+<div class="form-group">
+    <label>Title</label>
+    <input id="title" placeholder="Math Worksheet">
+</div>
+
+<div class="form-group">
+    <label>Subject</label>
+    <input id="subject" placeholder="Mathematics">
+</div>
+
+<div class="form-group">
+    <label>Grade</label>
+    <input id="grade" placeholder="Grade 5">
+</div>
+
+<div class="form-group">
+    <label>Due Date</label>
+    <input id="date" type="date">
+</div>
+
+<div class="form-group">
+    <label>Description</label>
+    <textarea id="desc" placeholder="Describe the homework..."></textarea>
+</div>
+
+<button class="assign-btn" onclick="addHomework()">
+    Assign
+</button>
+
+
+  
+</div>
+</div>
+
+<script>
+    function openModal() {
+    document.getElementById("modal").style.display = "block";
+}
+
+function closeModal() {
+    document.getElementById("modal").style.display = "none";
+}
+
+function addHomework() {
+
+    let title = title.value;
+    let subject = subject.value;
+    let grade = grade.value;
+    let date = date.value;
+    let desc = desc.value;
+
+    let card = `
+    <div class="card">
+        <div class="tag">${subject}</div>
+        <h4>${title}</h4>
+        <p>${desc}</p>
+
+        <div class="bottom">
+            <span>${grade}</span>
+            <span>Due: ${date}</span>
+        </div>
+    </div>
+    `;
+
+    document.getElementById("homeworkList").innerHTML += card;
+
+    closeModal();
+}
+
+</script>
+</body>
+</html>
