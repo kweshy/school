@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Students | HomeworkHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="logo">
+      <i class="fa-solid fa-book-open"></i>
+      <h2>HomeworkHub</h2>
+    </div>
+
+    <nav>
+      <a href="#" class="active"><i class="fa-solid fa-graduation-cap"></i> Students</a>
+      <a href="homework.html"><i class="fa-solid fa-book"></i> Homework</a>
+      
+    </nav>
+
+    <div class="logout">
+      <a href="dashboard.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="header-row">
+      <div>
+        <h1>Students</h1>
+        <p class="subtitle">Manage your students and parent contacts.</p>
+      </div>
+     </div>
+
+    <input type="text" class="search" placeholder="Search students...">
+
+    <div class="box">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Parent Name</th>
+            <th>WhatsApp Phone</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="3" class="empty">No students yet.</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+  </main>
+</div>
+
+<script src="students.js"></script>
+
+</body>
+</html>

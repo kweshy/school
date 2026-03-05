@@ -1,0 +1,126 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.main {
+  padding: 30px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.header p {
+  color: #6b7280;
+  margin-top: 4px;
+}
+
+/* Stats cards */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.card h2 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.card p {
+  margin-top: 6px;
+  color: #6b7280;
+}
+
+.green h2 { color: #16a34a; }
+.red h2 { color: #dc2626; }
+.orange h2 { color: #f97316; }
+
+/* Table */
+.table {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.table-header,
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+  padding: 12px 20px;
+}
+
+.table-header {
+  background: #f1f5f9;
+  font-weight: bold;
+}
+
+.table-row {
+  border-top: 1px solid #e5e7eb;
+}
+
+.table-row span {
+  text-align: center;
+}
+
+/* Back button */
+.back {
+  margin-top: 20px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+}
+/* Date Picker Styling */
+.date-picker {
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between label, input, and button */
+}
+
+.date-picker label {
+  font-weight: bold;
+  font-size: 16px;
+  color: #333;
+}
+
+.date-picker input[type="date"] {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s;
+}
+
+.date-picker input[type="date"]:focus {
+  border-color: #007bff;
+}
+
+.date-picker button {
+  padding: 8px 16px;
+  font-size: 14px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.date-picker button:hover {
+  background-color: #0056b3;
+}

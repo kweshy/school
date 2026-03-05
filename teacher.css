@@ -1,0 +1,219 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* ======================
+   DASHBOARD LAYOUT
+====================== */
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+/* ======================
+   SIDEBAR
+====================== */
+.sidebar {
+  width: 240px;
+  background: #0f172a;
+  color: white;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+/* Logo */
+.logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Navigation */
+.sidebar nav {
+  flex: 1;
+}
+
+.sidebar nav a {
+  display: block;
+  padding: 12px;
+  color: #cbd5e1;
+  text-decoration: none;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: 0.2s;
+}
+
+.sidebar nav a i {
+  margin-right: 10px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover {
+  background: #1e293b;
+  color: white;
+}
+
+/* ======================
+   SIDEBAR PROFILE
+====================== */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  border-top: 1px solid #334155;
+}
+
+/* Avatar circle */
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #e49b63;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Profile text */
+.profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* ======================
+   MAIN CONTENT
+====================== */
+.main {
+  flex: 1;
+  padding: 30px;
+  overflow-y: auto;
+}
+
+/* Header */
+.header h1 {
+  font-size: 26px;
+}
+
+.header p {
+  color: #64748b;
+  margin-top: 5px;
+}
+
+/* ======================
+   STAT CARDS
+====================== */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 14px;
+  color: white;
+}
+
+.card i {
+  font-size: 26px;
+}
+
+.card h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+
+.teal { background: #14b8a6; }
+.green { background: #22c55e; }
+.orange { background: #f59e0b; }
+.blue { background: #3b82f6; }
+
+/* ======================
+   GRID PANELS
+====================== */
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.panel {
+  background: white;
+  border-radius: 14px;
+  padding: 20px;
+}
+
+.panel h3 {
+  margin-bottom: 15px;
+}
+
+/* ======================
+   LIST ITEMS
+====================== */
+.list-item,
+.event {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Student Avatar */
+.avatar {
+  background: #e0f2f1;
+  color: #0f766e;
+  font-weight: bold;
+  width: 42px;
+  height: 42px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+  margin-right: 12px;
+}
+
+/* ======================
+   EVENTS
+====================== */
+.date {
+  background: #e0f2fe;
+  color: #0369a1;
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: bold;
+  margin-right: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

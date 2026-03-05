@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>School Events</title>
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<link rel="stylesheet" href="Events.css">
+</head>
+
+<body>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+    <h2 class="logo">🎓 Little Innovators</h2>
+
+    <nav>
+        <a href="dashboard.html"><i class="fa fa-home"></i> Dashboard</a>
+        <a href="student.html"><i class="fa fa-users"></i> Students</a>
+        <a href="attendance.html"><i class="fa fa-calendar-check"></i> Attendance</a>
+        <a href="students.html"><i class="fa fa-book"></i> Homework</a>
+        <a class="active"><i class="fa fa-calendar"></i> Events</a>
+        <a href="reports.html"><i class="fa fa-file"></i> Report Cards</a>
+        <a href="login.html" id="logoutBtn" class="logout-link">
+        <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+</a>
+    </nav>
+    <div class="sidebar-profile">
+  <div class="profile-icon">
+    <i class="fa-solid fa-user"></i>
+  </div>
+  <div class="profile-info">
+    <p class="profile-name" id="sidebarUserName">Loading...</p>
+  </div>
+</aside>
+
+<!-- MAIN -->
+<main class="main">
+
+<header class="topbar">
+    <h1>School Events</h1>
+
+    <button class="add-btn" onclick="openModal()">
+        <i class="fa fa-plus"></i> Add Event
+    </button>
+</header>
+
+<!-- EVENTS GRID -->
+<div class="events"></div>
+
+</main>
+
+</div>
+
+<!-- ================= MODAL ================= -->
+<div class="modal" id="eventModal">
+
+  <div class="modal-content">
+    
+    <!-- Close button -->
+    <span class="close" onclick="closeModal()">&times;</span>
+
+    <h2>New Event</h2>
+
+    <label>Title</label>
+    <input type="text" id="title">
+
+    <label>Date</label>
+    <input type="date" id="date">
+
+    <label>Time</label>
+    <input type="time" id="time">
+
+    <label>Type</label>
+    <select id="type">
+      <option>Academic</option>
+      <option>Sports</option>
+      <option>Holiday</option>
+      <option>Assembly</option>
+      <option>Meeting</option>
+    </select>
+
+    <label>Description</label>
+    <textarea id="description"></textarea>
+
+    <button class="submit" onclick="addEvent()">Add Event</button>
+
+  </div>
+</div>
+<script src="Events.js"></script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Homework | HomeworkHub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="layout">
+
+  <aside class="sidebar">
+    <div class="logo"> 
+      <i class="fa-solid fa-book-open"></i>
+      <h2>HomeworkHub</h2>
+    </div>
+
+    <nav>
+      <a href="students.html"><i class="fa-solid fa-graduation-cap"></i> Students</a>
+      <a href="#" class="active"><i class="fa-solid fa-book"></i> Homework</a>
+    </nav>
+
+    <div class="logout">
+      <a href="dashboard.html"><i class="fa-solid fa-arrow-right-from-bracket"></i> Sign Out</a>
+    </div>
+  </aside>
+
+  <main class="content">
+    <div class="header-row">
+      <div>
+        <h1>Homework</h1>
+        <p class="subtitle">Create assignments and send via WhatsApp.</p>
+      </div>
+      <button class="primary-btn" id="newHomeworkBtn">
+       <i class="fa-solid fa-plus"></i> New Homework
+    </button>
+    </div>
+
+    <div id="homeworkContainer">
+  <div class="box center" id="emptyState">
+    <p>No homework yet. Create your first assignment!</p>
+  </div>
+</div>
+
+
+  </main>
+</div>
+<!-- ================= MODAL ================= -->
+<div id="homeworkModal" class="modal">
+  <div class="modal-content">
+
+    <span id="closeModal" class="close-btn">&times;</span>
+
+    <h2>New Homework</h2>
+    <p class="subtitle">Fill in the homework details.</p>
+
+    <label>Subject</label>
+    <input type="text" id="subject">
+
+    <label>Title</label>
+    <input type="text" id="title">
+
+    <label>Description</label>
+    <textarea id="description"></textarea>
+
+    <label>Due Date</label>
+    <input type="date" id="dueDate">
+
+    <label>
+  <input type="checkbox" id="activeHomework">
+  Active
+    </label>
+
+    <button class="create-btn" id="createHomework">Create</button>
+  </div>
+  </div> <!-- ✅ CLOSE HERE -->
+  <!-- ASSIGN STUDENTS MODAL -->
+<div id="assignModal" class="modal">
+  <div class="modal-content">
+
+    <span id="closeAssignModal" class="close-btn">&times;</span>
+
+    <h2>Assign Students</h2>
+    <p>Select students to assign this homework to.</p>
+
+    <div id="studentList"></div>
+
+    <button id="assignSelected" class="create-btn">
+      Assign Selected
+    </button>
+    <button id="unassignSelected" class="action-btn">Unassign Selected</button>
+    <h4>WhatsApp Message</h4>
+
+<textarea id="whatsappMessage"
+rows="6"
+placeholder="Type message to parents... 
+
+Use:
+{student}
+{subject}
+{title}
+{description}
+{due_date}">
+</textarea>
+
+  </div>
+</div>
+<script src="homework.js"></script>
+</body>
+</html>

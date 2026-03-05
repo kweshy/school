@@ -1,0 +1,242 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Segoe UI;
+}
+
+body{
+background:#f4f6f8;
+}
+
+/* LAYOUT */
+.layout{
+display:flex;
+height:100vh;
+}
+
+/* SIDEBAR */
+.sidebar{
+width:240px;
+background:#0f172a;
+color:white;
+padding:20px;
+display: flex;
+flex-direction: column;
+height: 100vh;
+overflow-y: auto;
+}
+
+.logo{
+margin-bottom:30px;
+}
+
+.sidebar nav a{
+display:block;
+padding:12px;
+color:#cfd8dc;
+text-decoration:none;
+border-radius:8px;
+margin-bottom:8px;
+}
+
+.sidebar nav a.active,
+.sidebar nav a:hover{
+background:#1f6f63;
+color:white;
+}
+/* ======================
+   SIDEBAR PROFILE
+====================== */
+.sidebar-profile {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 15px;
+  margin-top: auto;
+  margin-bottom: 10px;
+  border-top: 1px solid #334155;
+}
+
+/* Avatar circle */
+.profile-icon {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #e49b63;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+/* Profile text */
+.profile-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: white;
+}
+
+.profile-role {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+/* MAIN */
+.main{
+flex:1;
+padding:30px;
+}
+
+.topbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:25px;
+}
+
+.add-btn{
+background:#2c8a7c;
+color:white;
+border:none;
+padding:12px 20px;
+border-radius:10px;
+cursor:pointer;
+}
+
+/* EVENTS */
+.events{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:20px;
+}
+
+.event-card{
+background:white;
+padding:20px;
+border-radius:12px;
+display:flex;
+gap:15px;
+align-items:center;
+box-shadow:0 2px 8px rgba(0,0,0,0.05);
+}
+
+.icon{
+width:50px;
+height:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+border-radius:12px;
+color:white;
+}
+
+.green{background:#dff5ec;color:#2c8a7c;}
+.blue{background:#e3ecff;color:#3b6df6;}
+.orange{background:#fff1db;color:#ff9800;}
+.mint{background:#e1f7f3;color:#1abc9c;}
+
+.event-card span{
+color:gray;
+font-size:14px;
+}
+
+/* MODAL */
+.modal{
+ z-index: 1000;      
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.4);
+display:none;
+justify-content:center;
+align-items:center;
+padding: 20px;       /* ensures space on small screens */
+overflow: auto; 
+}
+
+.modal-content{
+position: relative;      
+background:white;
+padding:30px;
+width:420px;
+border-radius:12px;
+display:flex;
+flex-direction:column;
+gap:10px;
+width: 100%;         /* stretch to fill available space */
+  max-width: 500px;    /* cap width on larger screens */
+  max-height: 90vh;    /* never taller than 90% of viewport */
+  overflow-y: auto;    /* scroll vertically if content exceeds max-height */
+  box-sizing: border-box;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea{
+padding:10px;
+border-radius:8px;
+border:1px solid #ccc;
+}
+/* Keep description textarea as-is */
+textarea#description {
+  resize: vertical;    /* user can still resize vertically if desired */
+  min-height: 80px;    /* keep original default size */
+}
+
+.submit{
+margin-top:10px;
+background:#2c8a7c;
+color:white;
+border:none;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+}
+/* Close Button */
+.close {
+ z-index: 10;    
+  position: absolute;
+  top: 15px;               /* a little space from top */
+  right: 20px;             /* a little space from right */
+  font-size: 28px;         /* large enough to see easily */
+  font-weight: bold;
+  color: #333;             /* dark gray color */
+  background: #eee;        /* light gray circular background */
+  width: 35px;             /* make it circular */
+  height: 35px;
+  border-radius: 50%;      /* circle shape */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.close:hover {
+  background: #2c8a7c;     /* match your button color */
+  color: white;
+  transform: scale(1.1);   /* slightly bigger on hover */
+}
+.event-card{
+display:flex;
+justify-content:space-between;
+align-items:center;
+}
+
+.delete{
+cursor:pointer;
+color:#999;
+font-size:18px;
+}
+
+.delete:hover{
+color:red;
+}

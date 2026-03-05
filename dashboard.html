@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Little Innovators Dashboard</title>
+  <link rel="stylesheet" href="teacher.css">
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="logo">
+      🎓 <span>Little Innovators</span>
+    </div>
+
+    <nav>
+  <a href="teacher-dashboard.html" class="active">
+    <i class="fa fa-chart-line"></i> Dashboard
+  </a>
+
+  <a href="student.html">
+    <i class="fa fa-users"></i> Students
+  </a>
+
+  <a href="attendance.html">
+    <i class="fa fa-calendar-check"></i> Attendance
+  </a>
+
+  <a href="students.html">
+    <i class="fa fa-book"></i> Homework
+  </a>
+
+  <a href="Events.html">
+    <i class="fa fa-calendar"></i> Events
+  </a>
+
+  <a href="reports.html">
+    <i class="fa fa-file"></i> Report Cards
+  </a>
+  <a href="login.html" id="logoutBtn" class="logout-link">
+  <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+</a>
+</nav>
+<div class="sidebar-profile">
+  <div class="profile-icon">
+    <i class="fa-solid fa-user"></i>
+  </div>
+  <div class="profile-info">
+    <p class="profile-name" id="sidebarUserName">Loading...</p>
+  </div>
+</div>
+</aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- HEADER -->
+    <header class="header">
+      <h1 id="greeting">Greetings Teacher! 👋</h1>
+      <p>Here's what's happening in your classroom today.</p>
+      </header>
+
+    <!-- STATS -->
+    <section class="stats">
+      <div class="card teal">
+  <i class="fa fa-users"></i>
+  <h2 id="totalStudents">0</h2> <!-- added id -->
+  <span>Total Students</span>
+</div>
+      <div class="card green" id="presentCard">
+    <i class="fa fa-clipboard-check"></i>
+    <h2 id="presentToday"></h2>
+    <span>Present Today</span>
+</div>
+
+      <div class="card orange">
+        <i class="fa fa-book-open"></i>
+        <h2 id="activeHomeworkCount">0</h2> <!-- Add this id -->
+        <span>Active Homework</span>
+      </div>
+
+      <div class="card blue">
+  <i class="fa fa-calendar"></i>
+   <h2 id="upcomingEventCount">0</h2>
+  <span id="upcomingEventCount">Upcoming Events</span>
+</div>
+    </section>
+  </main>
+</div>
+<script src="teacher.js"></script>
+</body>
+</html>

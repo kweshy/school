@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attendance | Teacher Dashboard</title>
+    <link rel="stylesheet" href="attendance.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  >
+</head>
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+    <div class="logo">🎓 <span>Little Innovators</span>
+    </div>
+   <nav>
+  <a href="dashboard.html">
+    <i class="fa fa-chart-line"></i> Dashboard
+  </a>
+
+  <a href="student.html">
+    <i class="fa fa-users"></i> Students
+  </a>
+
+  <a href="attendance.html" class="active">
+    <i class="fa fa-calendar-check"></i> Attendance
+  </a>
+
+  <a href="students.html">
+    <i class="fa fa-book"></i> Homework
+  </a>
+
+  <a href="Events.html">
+    <i class="fa fa-calendar"></i> Events
+  </a>
+
+  <a href="reports.html">
+    <i class="fa fa-file"></i> Report Cards
+  </a>
+  <a href="login.html" id="logoutBtn" class="logout-link">
+  <i class="fa-solid fa-right-from-bracket"></i> Sign Out
+</a>
+</nav>
+<div class="sidebar-profile">
+  <div class="profile-icon">
+    <i class="fa-solid fa-user"></i>
+  </div>
+  <div class="profile-info">
+    <p class="profile-name" id="sidebarUserName">Loading...</p>
+  </div>
+</div>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+    <div class="header">
+    <div>
+        <h1>Attendance</h1>
+        <p>Mark and track student attendance</p>
+    </div>
+  
+    
+    <div class="header-buttons">
+        <button class="save">Save</button>
+        <button class="report">Report</button>
+    </div>
+  </div>
+    
+
+    <div class="controls">
+    <input type="date" value="2026-02-07">
+
+    <!-- Search Box -->
+    <div class="search-box">
+        <i class="fa fa-filter"></i>
+        <input type="text" id="searchStudent" placeholder="Search student...">
+    </div>
+
+    <!-- Set Total Students -->
+    <input type="number" id="totalStudentsInput" min="1" placeholder="Total Students" />
+    <button id="setTotalBtn">Set Total</button>
+
+    <!-- Mark All Present -->
+    <button id="markAllBtn">Mark All Present</button>
+</div>
+
+    <div class="table">
+        <div class="table-header">
+            <div>Student</div>
+            <div>Status</div>
+            <div>Actions</div>
+        </div>
+        <div class="table-body" id="studentTable"></div>
+        
+    </div>
+    
+</div>
+<script src="attendance.js"></script>
+</body>
+</html>
